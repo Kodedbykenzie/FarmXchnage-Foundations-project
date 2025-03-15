@@ -1,15 +1,10 @@
 from fastapi import FastAPI
-from .routers import some_router  # Import your routers here
+from .routers import items
+from .database import engine
+from . import models
+
+models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-# Include routers
-app.include_router(some_router)
-
-@app.get("/")
-def read_root():
-    return {"message": "Welcome to FarmXchange API"}
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+app.include_router(items.router)
