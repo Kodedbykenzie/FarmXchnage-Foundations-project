@@ -1,6 +1,6 @@
-# FarmXchange Project
+# FarmXchange
 
-FarmXchange is an e-commerce platform that connects farmers directly with customers, enabling them to sell agricultural products without intermediaries. This project provides an online marketplace where farmers can list their produce, and consumers can purchase them in wholesale or retail quantities.
+FarmXchange is an e-commerce platform that connects farmers directly with customers, enabling them to sell agricultural products without intermediaries. This project consists of a backend built with FastAPI and a frontend developed using React.
 
 ## Project Structure
 
@@ -8,75 +8,71 @@ The project is organized into two main directories: `backend` and `frontend`.
 
 ### Backend
 
-The backend is built using Python and FastAPI. It handles the business logic, database interactions, and API endpoints.
+The backend is built using FastAPI and SQLAlchemy. It includes the following components:
 
 - **app/**: Contains the main application code.
   - **__init__.py**: Initializes the app package.
   - **main.py**: Entry point of the backend application.
-  - **models/**: Contains data models representing the database tables.
-  - **routers/**: Defines the API routes for the application.
-  - **schemas/**: Contains Pydantic schemas for data validation and serialization.
-  - **database.py**: Contains the database connection logic.
+  - **models.py**: Defines the database models.
+  - **schemas.py**: Defines Pydantic models for data validation.
+  - **crud.py**: Contains CRUD operations for the database.
+  - **database.py**: Sets up the database connection.
+  - **routers/**: Contains API route definitions.
+    - **items.py**: API routes related to products.
 
 - **requirements.txt**: Lists the dependencies required for the backend application.
-
-- **README.md**: Documentation specific to the backend.
+- **README.md**: Documentation for the backend, including setup instructions and API usage.
 
 ### Frontend
 
-The frontend is built using React. It provides the user interface for the application.
+The frontend is developed using React. It includes the following components:
 
 - **public/**: Contains static files.
   - **index.html**: Main HTML file for the React application.
 
 - **src/**: Contains the source code for the React application.
-  - **components/**: Contains React components.
-    - **App.js**: Main App component.
-  - **App.js**: Additional application logic or routing.
+  - **App.js**: Main component that sets up routing.
   - **index.js**: Entry point for the React application.
-  - **styles/**: Contains styles for the React application.
-    - **App.css**: Styles for the App component.
+  - **components/**: Contains reusable components.
+    - **Header.js**: Header component.
+    - **Footer.js**: Footer component.
+    - **ProductList.js**: Component to display a list of products.
+  - **pages/**: Contains page components.
+    - **HomePage.js**: Landing page component.
+    - **ProductPage.js**: Component to display product details.
+  - **services/**: Contains API call functions.
+    - **api.js**: Functions for making API calls to the backend.
+  - **styles/**: Contains CSS styles.
+    - **App.css**: Styles for the React application.
 
-- **package.json**: Configuration file for npm, listing dependencies and scripts.
+### Installation and Setup
 
-- **README.md**: Documentation specific to the frontend.
-
-### Getting Started
-
-To get started with the FarmXchange project, follow these steps:
-
-1. **Clone the repository**:
-   ```
-   git clone <repository-url>
-   cd FarmXchange
-   ```
-
-2. **Set up the backend**:
+1. **Backend Setup**:
    - Navigate to the `backend` directory.
-   - Install the required dependencies:
+   - Install the required dependencies using:
      ```
      pip install -r requirements.txt
      ```
-   - Run the backend application:
+   - Run the backend server using:
      ```
      uvicorn app.main:app --reload
      ```
 
-3. **Set up the frontend**:
+2. **Frontend Setup**:
    - Navigate to the `frontend` directory.
-   - Install the required dependencies:
+   - Install the required dependencies using:
      ```
      npm install
      ```
-   - Run the frontend application:
+   - Start the frontend application using:
      ```
      npm start
      ```
 
+### API Documentation
+
+Refer to the backend `README.md` for detailed API usage instructions.
+
 ### Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or features.
-
-### License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
+Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.

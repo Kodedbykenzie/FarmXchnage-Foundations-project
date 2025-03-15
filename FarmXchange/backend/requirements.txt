@@ -1,9 +1,6 @@
-FastAPI
-SQLAlchemy
+fastapi
 uvicorn
+sqlalchemy
 pydantic
-databases
-asyncpg
+psycopg2-binary
 python-dotenv
-pytest
-httpx

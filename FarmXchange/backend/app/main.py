@@ -7,4 +7,8 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to FarmXchange"}
+
 app.include_router(items.router)
