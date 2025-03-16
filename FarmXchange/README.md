@@ -69,10 +69,10 @@ The frontend is developed using React. It includes the following components:
      npm start
      ```
 
-### API Documentation
+## API Documentation
 
 Refer to the backend `README.md` for detailed API usage instructions.
 
-### Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
