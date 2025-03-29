@@ -107,9 +107,10 @@ This project is licensed under the **MIT License**.
 ---
 
 ## **📧 Contributors**  
-Precious Chibundu Mozia - Dveloper
-Otani - Project Manager
-Ulrich - Ui/UX Designer  
+**Development Team:**
+• 👨‍💻 **Precious Chibundu Mozia** - Lead Developer  
+• 📊 **Otani** - Project Manager  
+• 🎨 **Ulrich** - UI/UX Designer
 
 --- 
 
