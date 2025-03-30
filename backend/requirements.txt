@@ -1,3 +1,7 @@
-Flask==2.0.3
-Flask-Cors==3.0.10
-give me the following 
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+fastapi-users[sqlalchemy]
+passlib
+python-jose
