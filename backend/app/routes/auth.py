@@ -6,6 +6,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import sessionmaker
 from ..models import User
 from ..database import engine, Base, SessionLocal
+from ..schemas import UserRead, UserCreate 
+from backend.app.schemas import UserRead, UserCreate
+# Import the schemas
 
 SECRET = "SECRET_KEY"
 
@@ -24,7 +27,7 @@ auth_backend = AuthenticationBackend(
 )
 
 # Dependency to get the database session
-def get_async_session() -> AsyncSession:
+async def get_async_session() -> AsyncSession:
     async_session = sessionmaker(
         engine, class_=AsyncSession, expire_on_commit=False
     )
@@ -44,4 +47,6 @@ fastapi_users = FastAPIUsers[User, int](
 # Create the auth router
 router = APIRouter()
 router.include_router(fastapi_users.get_auth_router(auth_backend))
-router.include_router(fastapi_users.get_register_router())
+router.include_router(
+    fastapi_users.get_register_router(UserRead, UserCreate)  # Pass the schemas here
+)
