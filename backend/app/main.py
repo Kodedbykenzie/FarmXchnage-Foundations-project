@@ -1,7 +1,6 @@
 from fastapi import FastAPI
-from app.routes import auth, products  # Absolute import
-from app.database import Base, engine  # Absolute import
-from backend.app.routes import auth, products
+from app.routes import auth, products  # Absolute import (correct if in backend/app/)
+from app.database import Base, engine  # Absolute import (correct if in backend/app/)
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
