@@ -7,7 +7,7 @@ from sqlalchemy.orm import sessionmaker
 from ..models import User
 from ..database import engine, Base, SessionLocal
 from ..schemas import UserRead, UserCreate 
-from backend.app.schemas import UserRead, UserCreate
+
 # Import the schemas
 
 SECRET = "SECRET_KEY"
