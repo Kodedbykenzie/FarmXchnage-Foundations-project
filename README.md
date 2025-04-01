@@ -31,8 +31,7 @@ FarmXchange is a **direct-to-consumer e-commerce platform** connecting farmers w
 | Frontend       | React, TypeScript, Tailwind CSS      |  
 | State Management | Context API or Redux (optional)      |  
 | Backend        | Firebase/python           |  
-| Database       | Firestore                |  
-| Auth           | Firebase Authentication              |  
+| Database       | FastAPI                |   
 | Deployment     | Vercel, Render                       |  
 
 ---
@@ -110,9 +109,8 @@ This project is licensed under the **MIT License**.
 • 👨‍💻 **Precious Chibundu Mozia** - Lead Developer  
 • 📊 **Otani** - Project Manager  
 • 🎨 **Ulrich** - UI/UX Designer
-• 🤖 **Olivier** - Front End Developer 
+• 🤖 **Olivier** - Front End Developer
 • 🤖 **Sarah** - Database & API Developer
-
 
 --- 
 
