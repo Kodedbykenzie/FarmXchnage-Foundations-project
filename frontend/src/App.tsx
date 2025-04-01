@@ -59,93 +59,101 @@ import { BusinessSettings } from './pages/dashboards/business/BusinessSettings';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { OrderTrackingPage } from './pages/public/OrderTrackingPage';
 
+// Import CacheProvider and createCache
+import { CacheProvider } from '@emotion/react';
+import createCache from '@emotion/cache';
+
+// Create cache instance
+const cache = createCache({ key: 'mui' });
+
 export function App() {
   return (
-    <AuthProvider>
-      <Routes>
-        {/* Public Routes */}
-        <Route element={<PublicLayout />}>
-          <Route index element={<HomePage />} />
-          <Route path="products">
-            <Route index element={<ProductsPage />} />
-            <Route path=":productId" element={<ProductDetailsPage />} />
-          </Route>
-          <Route path="how-it-works" element={<HowItWorksPage />} />
-          <Route path="about" element={<AboutPage />} />
-          <Route path="contact" element={<ContactPage />} />
-          <Route path="blog">
-            <Route index element={<BlogPage />} />
-            <Route path=":postId" element={<PostPage />} />
-          </Route>
-          <Route path="faq" element={<FAQPage />} />
-          <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
-          <Route path="terms-of-service" element={<TermsOfServicePage />} />
-          <Route path="/track-order/:orderId" element={<OrderTrackingPage />} />
-        </Route>
-
-        {/* Auth Routes */}
-        <Route path="signin" element={<SignInPage />} />
-        <Route path="signup" element={<SignUpPage />} />
-        <Route path="forgot-password" element={<ForgotPasswordPage />} />
-        <Route path="reset-password" element={<ResetPasswordPage />} />
-        <Route path="verify-email" element={<VerifyEmailPage />} />
-
-        {/* Protected Dashboard Routes */}
-        <Route element={<ProtectedRoute />}>
-          <Route element={<DashboardLayout />}>
-            {/* Admin Dashboard */}
-            <Route path="admin" element={<ProtectedRoute role="admin" />}>
-              <Route index element={<AdminDashboard />} />
-              <Route path="dashboard" element={<AdminDashboard />} />
-              <Route path="users" element={<UserManagement />} />
-              <Route path="approvals" element={<ProductApprovals />} />
-              <Route path="analytics" element={<AdminAnalytics />} />
-              <Route path="reports" element={<AdminReports />} />
-              <Route path="settings" element={<AdminSettings />} />
-              <Route path="profile" element={<ProfilePage />} />
-              <Route path="notifications" element={<NotificationsPage />} />
+    <CacheProvider value={cache}>  {/* Wrap the app with CacheProvider */}
+      <AuthProvider>
+        <Routes>
+          {/* Public Routes */}
+          <Route element={<PublicLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="products">
+              <Route index element={<ProductsPage />} />
+              <Route path=":productId" element={<ProductDetailsPage />} />
             </Route>
+            <Route path="how-it-works" element={<HowItWorksPage />} />
+            <Route path="about" element={<AboutPage />} />
+            <Route path="contact" element={<ContactPage />} />
+            <Route path="blog">
+              <Route index element={<BlogPage />} />
+              <Route path=":postId" element={<PostPage />} />
+            </Route>
+            <Route path="faq" element={<FAQPage />} />
+            <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="terms-of-service" element={<TermsOfServicePage />} />
+            <Route path="/track-order/:orderId" element={<OrderTrackingPage />} />
+          </Route>
 
-            {/* Farmer Dashboard */}
-            <Route path="farmer" element={<ProtectedRoute role="farmer" />}>
-              <Route index element={<FarmerDashboard />} />
-              <Route path="products" element={<ProductManagement />} />
-              <Route path="orders">
-                <Route index element={<FarmerOrders />} />
-                <Route path=":orderId" element={<OrderDetailsPage />} />
+          {/* Auth Routes */}
+          <Route path="signin" element={<SignInPage />} />
+          <Route path="signup" element={<SignUpPage />} />
+          <Route path="forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="reset-password" element={<ResetPasswordPage />} />
+          <Route path="verify-email" element={<VerifyEmailPage />} />
+
+          {/* Protected Dashboard Routes */}
+          <Route element={<ProtectedRoute />}>
+            <Route element={<DashboardLayout />}>
+              {/* Admin Dashboard */}
+              <Route path="admin" element={<ProtectedRoute role="admin" />}>
+                <Route index element={<AdminDashboard />} />
+                <Route path="dashboard" element={<AdminDashboard />} />
+                <Route path="users" element={<UserManagement />} />
+                <Route path="approvals" element={<ProductApprovals />} />
+                <Route path="analytics" element={<AdminAnalytics />} />
+                <Route path="reports" element={<AdminReports />} />
+                <Route path="settings" element={<AdminSettings />} />
+                <Route path="profile" element={<ProfilePage />} />
+                <Route path="notifications" element={<NotificationsPage />} />
               </Route>
-              <Route path="wallet" element={<FarmerWallet />} />
-              <Route path="messages" element={<FarmerMessages />} />
-              <Route path="settings" element={<FarmerSettings />} />
-              <Route path="profile" element={<ProfilePage />} />
-              <Route path="notifications" element={<NotificationsPage />} />
-            </Route>
 
-            {/* Business Dashboard */}
-            <Route path="business" element={<ProtectedRoute role="business" />}>
-              <Route index element={<BusinessDashboard />} />
-              <Route path="marketplace" element={<Marketplace />} />
-              <Route path="orders">
-                <Route index element={<BusinessOrders />} />
-                <Route path=":orderId" element={<OrderDetailsPage />} />
+              {/* Farmer Dashboard */}
+              <Route path="farmer" element={<ProtectedRoute role="farmer" />}>
+                <Route index element={<FarmerDashboard />} />
+                <Route path="products" element={<ProductManagement />} />
+                <Route path="orders">
+                  <Route index element={<FarmerOrders />} />
+                  <Route path=":orderId" element={<OrderDetailsPage />} />
+                </Route>
+                <Route path="wallet" element={<FarmerWallet />} />
+                <Route path="messages" element={<FarmerMessages />} />
+                <Route path="settings" element={<FarmerSettings />} />
+                <Route path="profile" element={<ProfilePage />} />
+                <Route path="notifications" element={<NotificationsPage />} />
               </Route>
-              <Route path="wallet" element={<BusinessWallet />} />
-              <Route path="messages" element={<BusinessMessages />} />
-              <Route path="settings" element={<BusinessSettings />} />
-              <Route path="profile" element={<ProfilePage />} />
-              <Route path="notifications" element={<NotificationsPage />} />
+
+              {/* Business Dashboard */}
+              <Route path="business" element={<ProtectedRoute role="business" />}>
+                <Route index element={<BusinessDashboard />} />
+                <Route path="marketplace" element={<Marketplace />} />
+                <Route path="orders">
+                  <Route index element={<BusinessOrders />} />
+                  <Route path=":orderId" element={<OrderDetailsPage />} />
+                </Route>
+                <Route path="wallet" element={<BusinessWallet />} />
+                <Route path="messages" element={<BusinessMessages />} />
+                <Route path="settings" element={<BusinessSettings />} />
+                <Route path="profile" element={<ProfilePage />} />
+                <Route path="notifications" element={<NotificationsPage />} />
+              </Route>
             </Route>
           </Route>
-        </Route>
 
-        {/* Error Handling */}
-        <Route path="/404" element={<NotFoundPage />} />
-        <Route path="*" element={<Navigate to="/404" replace />} />
-      </Routes>
+          {/* Error Handling */}
+          <Route path="/404" element={<NotFoundPage />} />
+          <Route path="*" element={<Navigate to="/404" replace />} />
+        </Routes>
 
-      <Toaster position="top-right" richColors expand={true} />
-    </AuthProvider>
-  );
+            <Toaster position="top-right" richColors expand={true} />
+          </AuthProvider>
+      </CacheProvider> )
 }
 
 export default App;
