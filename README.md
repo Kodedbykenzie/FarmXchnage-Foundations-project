@@ -106,11 +106,11 @@ This project is licensed under the **MIT License**.
 ---
 
 ## **Development Team:**
-• 👨‍💻 **Precious Chibundu Mozia** - Lead Developer  
-• 📊 **Otani** - Project Manager  
-• 🎨 **Ulrich** - UI/UX Designer
-• 🤖 **Olivier** - Front End Developer
-• 🤖 **Sarah** - Database & API Developer
+- 👨‍💻 **Precious Chibundu Mozia** - Lead Developer  
+- 📊 **Otani** - Project Manager  
+- 🎨 **Ulrich** - UI/UX Designer  
+- 🤖 **Olivier** - Front End Developer  
+- 🤖 **Sarah** - Database & API Developer  
 
 --- 
 
