@@ -20,7 +20,6 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Improved the product listing interface for a more user-friendly experience.
 - Enhanced backend performance for faster load times and database efficiency.
-- Upgraded security measures to protect transactions and user data.
 
 ### Fixed
 - Resolved login issues affecting certain users.
