@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from .routes import auth, products  # Relative import# Absolute import (correct if in backend/app/)
-from app.database import Base, engine  # Absolute import (correct if in backend/app/)
+from app.database import Base, engine
+from app.routes import auth, products  # ✅ Absolute import
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
@@ -21,6 +21,11 @@ app = FastAPI(
     }
 )
 
-# Include routes
+# Root endpoint to prevent 404 errors
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the E-commerce API! Check /docs for available endpoints."}
+
+# Include authentication and product routes
 app.include_router(auth.router, prefix="/auth", tags=["auth"])
 app.include_router(products.router, prefix="/products", tags=["products"])
