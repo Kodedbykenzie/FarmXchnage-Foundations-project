@@ -8,5 +8,6 @@ export default defineConfig({
     rollupOptions: {
       external: ['@material-tailwind/react'], // Externalize the @material-tailwind/react module
     },
+    chunkSizeWarningLimit: 2000, // Increase the chunk size warning limit to 2MB
   },
 })
