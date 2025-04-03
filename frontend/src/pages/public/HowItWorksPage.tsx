@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Button, Card, Typography } from "@material-tailwind/react";
 export function HowItWorksPage() {
   const steps = [
     {

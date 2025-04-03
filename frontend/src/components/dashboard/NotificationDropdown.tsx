@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Bell, Check, X } from 'lucide-react';
+import { Button, Card, Typography } from "@material-tailwind/react";
 type Notification = {
   id: string;
   title: string;

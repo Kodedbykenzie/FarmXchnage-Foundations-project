@@ -1,6 +1,7 @@
 import React from 'react';
 import { StarIcon, ShoppingCartIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Button, Card, Typography } from "@material-tailwind/react";
 const products = [{
   id: 1,
   name: 'Organic Tomatoes',

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-
+import { Button, Card, Typography } from "@material-tailwind/react";
 export function FarmerSettings() {
   const [settings, setSettings] = useState({
     emailNotifications: true,

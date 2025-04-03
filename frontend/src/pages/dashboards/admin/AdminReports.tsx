@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
-
+import { Button, Card, Typography } from "@material-tailwind/react";
 // Mock report data
 const reportsData = [
   { id: 1, type: 'Sales Report', date: '2025-02-27', generatedBy: 'Admin', status: 'Completed' },

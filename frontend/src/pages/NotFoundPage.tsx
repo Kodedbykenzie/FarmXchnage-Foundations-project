@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { Button, Card, Typography } from "@material-tailwind/react";
 export function NotFoundPage() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">

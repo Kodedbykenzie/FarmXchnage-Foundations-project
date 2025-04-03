@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { SearchIcon, ShoppingCartIcon, UserIcon, MenuIcon, XIcon, LogOutIcon } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { Button, Card, Typography } from "@material-tailwind/react";
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const {

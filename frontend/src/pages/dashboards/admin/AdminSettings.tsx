@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Button, Card, Typography } from "@material-tailwind/react";
 export function AdminSettings() {
   const [generalSettings, setGeneralSettings] = useState({
     siteName: 'FarmXchange',

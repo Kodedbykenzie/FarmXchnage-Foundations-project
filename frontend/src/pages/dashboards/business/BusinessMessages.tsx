@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-
+import { Button, Card, Typography } from "@material-tailwind/react";
 // Mock conversation data
 const conversations = [
   { id: 1, name: 'John Doe', lastMessage: 'Hi, when will my order be delivered?', timestamp: '2023-10-01 10:30 AM' },

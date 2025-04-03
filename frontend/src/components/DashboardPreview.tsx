@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BarChartIcon, UsersIcon, ShoppingBagIcon } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { Button, Card, Typography } from "@material-tailwind/react";
 export function DashboardPreview() {
   const {
     isAuthenticated,

@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
-
+import { Button, Card, Typography } from "@material-tailwind/react";
 // Mock user data
 const initialUsers = [
   { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Farmer', status: 'Active' },

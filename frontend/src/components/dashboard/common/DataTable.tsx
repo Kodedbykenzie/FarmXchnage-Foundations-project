@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Search, Filter } from 'lucide-react';
+import { Button, Card, Typography } from "@material-tailwind/react";
 type Column<T> = {
   key: keyof T;
   title: string;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-
+import { Button, Card, Typography } from "@material-tailwind/react";
 export function ProductDetailsPage() {
   const { productId } = useParams<{ productId: string }>();
 

@@ -4,6 +4,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import { SearchBar } from './SearchBar';
 import { NotificationDropdown } from './NotificationDropdown';
 import { Breadcrumb } from './common/Breadcrumb';
+import { Button, Card, Typography } from "@material-tailwind/react";
 type DashboardHeaderProps = {
   onMenuClick: () => void;
 };

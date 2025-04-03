@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Toaster } from 'sonner';
+import { Button, Card, Typography } from "@material-tailwind/react";
+
 
 export function ResetPasswordPage() {
   const { token } = useParams<{ token: string }>();

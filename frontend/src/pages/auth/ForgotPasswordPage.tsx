@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Button, Card, Typography } from "@material-tailwind/react";
+
 
 export function ForgotPasswordPage() {
   const [email, setEmail] = useState('');

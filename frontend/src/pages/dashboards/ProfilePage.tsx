@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button, Card, Typography } from "@material-tailwind/react";
 
 export function ProfilePage() {
   const [profile, setProfile] = useState({

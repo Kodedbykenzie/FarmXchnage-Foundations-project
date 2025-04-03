@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Checkbox } from '@mui/material';
-
+import { Button, Card, Typography } from "@material-tailwind/react";
 // Mock product data for approval
 const pendingProducts = [
   { id: 1, name: 'Fresh Tomatoes', farmer: 'John Doe', quantityKg: 50, pricePerKg: 1000 },

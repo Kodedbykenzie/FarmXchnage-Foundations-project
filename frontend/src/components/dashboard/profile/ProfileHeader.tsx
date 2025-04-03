@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, Card, Typography } from "@material-tailwind/react";
 import { Camera, Medal, Star, Award } from 'lucide-react';
 import { Badge } from '../common/Badge';
 type ProfileHeaderProps = {

@@ -5,7 +5,7 @@ import { Progress } from '../../components/ui/Progress';
 import { RoleSelection } from '../../components/signup/RoleSelection';
 import { BasicInfoForm } from '../../components/signup/BasicInfoForm';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import { Button, Card, Typography } from "@material-tailwind/react";
 type Role = 'farmer' | 'business';
 type SignupStep = {
   title: string;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Button, Card, Typography } from "@material-tailwind/react";
 export function BusinessSettings() {
   const [profile, setProfile] = useState({
     name: 'FarmXchange Business',

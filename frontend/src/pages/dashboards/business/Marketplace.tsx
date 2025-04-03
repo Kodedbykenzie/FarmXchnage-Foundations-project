@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Button, Card, Typography } from "@material-tailwind/react";
 // Mock product data with images
 const initialProducts = [
   { id: 1, name: 'Fresh Tomatoes', quantityKg: 50, image: 'https://img.freepik.com/free-photo/fresh-red-tomatoes_2829-13449.jpg?t=st=1742667897~exp=1742671497~hmac=04abea3d40837a509114999b7faf1ed2de3c7381891a7eec5f586bcf38043508&w=1380' },

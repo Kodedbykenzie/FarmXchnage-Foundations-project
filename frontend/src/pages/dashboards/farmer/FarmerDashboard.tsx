@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-
+import { Button, Card, Typography } from "@material-tailwind/react";
 export function FarmerDashboard() {
   const [products, setProducts] = useState([
     { id: 1, name: 'Maize', price: 1200, quantity: 50, description: 'Fresh harvested maize' },

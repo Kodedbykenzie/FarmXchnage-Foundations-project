@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BellIcon, CheckCircleIcon, TruckIcon, CurrencyDollarIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
+import { Button, Card, Typography } from "@material-tailwind/react";
 
 type Notification = {
   id: string;

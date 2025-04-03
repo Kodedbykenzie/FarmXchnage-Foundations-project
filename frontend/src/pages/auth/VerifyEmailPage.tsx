@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { DashboardLayout } from '../../layouts/DashboardLayout';
 import { Toaster } from 'sonner';
+import { Button, Card, Typography } from "@material-tailwind/react";
 
 export function VerifyEmailPage() {
   const { token } = useParams<{ token: string }>();

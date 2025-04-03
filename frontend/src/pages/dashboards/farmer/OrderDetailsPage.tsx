@@ -2,7 +2,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { TruckIcon, CurrencyDollarIcon, UserIcon, CalendarIcon } from '@heroicons/react/24/outline';
-
+import { Button, Card, Typography } from "@material-tailwind/react";
 export function OrderDetailsPage() {
   const { orderId } = useParams<{ orderId: string }>();
 

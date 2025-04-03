@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Search, X } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
+import { Button, Card, Typography } from "@material-tailwind/react";
 type SearchResult = {
   id: string;
   title: string;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Users, ShoppingBag, DollarSign, TrendingUp } from 'lucide-react';
+import { Button, Card, Typography } from "@material-tailwind/react";
 const stats = [{
   name: 'Total Users',
   value: '1,234',
